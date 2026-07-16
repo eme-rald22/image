@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=poppins:wght@400;500&display=swap');
+body{
+    background:#f0efec;
+    font-family:'Poppins',sans-serif;
+    color:#1a1a2e;
+    margin:0;
+    padding:40px 20px;
+} 
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    font-weight:700;
+    color:#1a1a2e;
+    text-align:center;
+    margin-bottom:8px;
+}
+h1::after{
+    content:"collection";
+    font-size:28px;
+    display:block;
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-weight:400;
+    margin-top:-6px;
+}
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:900px;
+    margin:0 auto;
+}
+img {
+   width: 100%;
+   height:220px;
+   object-fit: cover;
+   border-radius:16px;
+   box-shadow:0 8px 20px rgba(0,0,0,0.12);
+   transition: transform 0.3s ease,box-shadow 0.3s ease;
+   cursor:pointer;
+}
+img:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+.lightbox {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items: center;
+    z-index: 10;
+}
+
+.lightbox.active {
+    display:flex;
+}
+.lightbox img {
+    width:auto;
+    height:auto;
+    max-width:80%;
+    max-height:80%;
+    border-radius:8px;
+}
+.close-btn{
+    position: absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+}
+.nav-btn{
+    background:rgba(255,255,255,0.2);
+    border:none;
+    color:white;
+    font-size:1.5rem;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:50%;
+}
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 16px rgba(0,0,0,0.3);
+    cursor:pointer;
+}
+@media (max-width:600px){
+    .gallery{
+        grid-template-columns:repeat(1,1fr);
+    }
+}
+@media(min-width:601px) and (max-width:900px){
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:30px;
+}
+.filter-btn{
+    padding:10px 22px;
+    border:1px solid #ddd;
+    border-radius: 30px;
+    background:#fff;
+    cursor:pointer;
+    font-family:'poppins',sans-serif;
+    font-size:14px;
+    transition:all 0.2s ease;
+}
+.filter-btn.active{
+    background:#e8792c;
+    color:#fff;
+    border-color:#e8792c;
+}
+filter-btn:hover{
+    border-color:#e8792c;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emmies Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>My Gallery</h1>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="art">Art</button>
+            <button class="filter-btn" data-filter="portrait">portrait</button>
+        </div>
+    <div class="gallery">
+    <img src="images/photo1.jpg" alt="Photo 1" data-category="art">
+    <img src="images/photo2.jpg" alt="Photo 2" data-category="portrait">
+    <img src="images/photo3.jpg" alt="Photo 3" data-category="nature">
+    <img src="images/photo4.jpg" alt="Photo 4" data-category="nature">
+    <img src="images/photo5.jpg" alt="Photo 5" data-category="art">
+    <img src="images/photo6.jpg" alt="Photo 6" data-category="portrait">
+    <img src="images/photo7.jpg" alt="Photo 7" data-category="nature">
+    <img src="images/photo8.jpg" alt="Photo 8" data-category="art">
+    <img src="images/photo9.jpg" alt="Photo 9" data-category="art">
+    <img src="images/photo10.jpg" alt="Photo 10" data-category="portrait">
+     <img src="images/photo11.jpg" alt="Photo 11" data-category="art">
+    <img src="images/photo12.jpg" alt="Photo 12" data-category="nature">
+    <img src="images/photo13.jpg" alt="Photo 13" data-category="portrait">
+    <img src="images/photo14.jpg" alt="Photo 14" data-category="portrait">
+    <img src="images/photo15.jpg" alt="Photo 15" data-category="portrait">
+    <img src="images/photo16.jpg" alt="Photo 16" data-category="nature">
+    <img src="images/photo17.jpg" alt="Photo 17" data-category="art">
+ 
+    </div>
+    
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <button class="nav-btn" id="prevBtn">&#10094</button>
+        <img id="lightboxImg" src="">
+        <button class="nav-btn" id="nextBtn">&#10095</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
